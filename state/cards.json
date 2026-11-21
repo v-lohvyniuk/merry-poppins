@@ -1,3 +1,28 @@
 {
-  "cards": []
+  "cards": [
+    {
+      "id": "m01-001",
+      "module": "m01_first_program",
+      "question": "What is main in a Java program?",
+      "expected_answer": [
+        "the place where the program starts",
+        "its lines run from top to bottom, in order"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-22",
+      "history": []
+    },
+    {
+      "id": "m01-002",
+      "module": "m01_first_program",
+      "question": "What does System.out.println(\"...\") do?",
+      "expected_answer": [
+        "prints the text between the quotes to the console",
+        "one println = one line"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-22",
+      "history": []
+    }
+  ]
 }

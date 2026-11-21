@@ -13,5 +13,6 @@ public class Greeting {
 
     public static void main(String[] args) {
         // TODO: print the line from the comment above, exactly as written.
+        System.out.println("Hello, MerryBank!");
     }
 }
