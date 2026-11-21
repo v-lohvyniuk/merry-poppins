@@ -1,0 +1,15 @@
+# Build output
+exercises/target/
+target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Tutor runtime files (not part of the learning record)
+state/.session.json
+state/.cards-*.tmp
+.claude/settings.local.json
+__pycache__/
