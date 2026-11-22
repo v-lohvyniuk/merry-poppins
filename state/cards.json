@@ -8,9 +8,14 @@
         "the place where the program starts",
         "its lines run from top to bottom, in order"
       ],
-      "interval_days": 1,
-      "due_date": "2026-11-22",
-      "history": []
+      "interval_days": 2,
+      "due_date": "2026-11-24",
+      "history": [
+        {
+          "date": "2026-11-22",
+          "result": "correct"
+        }
+      ]
     },
     {
       "id": "m01-002",
@@ -20,8 +25,64 @@
         "prints the text between the quotes to the console",
         "one println = one line"
       ],
+      "interval_days": 2,
+      "due_date": "2026-11-24",
+      "history": [
+        {
+          "date": "2026-11-22",
+          "result": "correct"
+        }
+      ]
+    },
+    {
+      "id": "m01-003",
+      "module": "m01_first_program",
+      "question": "What does ; do in Java, and what is a // line?",
+      "expected_answer": [
+        "every instruction ends with ; like a full stop",
+        "// starts a comment: a note for humans that Java skips"
+      ],
       "interval_days": 1,
-      "due_date": "2026-11-22",
+      "due_date": "2026-11-23",
+      "history": []
+    },
+    {
+      "id": "m01-004",
+      "module": "m01_first_program",
+      "question": "A compile error appears. What do you look at first?",
+      "expected_answer": [
+        "the file name and line number",
+        "the message: what Java expected",
+        "fix the first error first, then run again"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-23",
+      "history": []
+    },
+    {
+      "id": "m02-001",
+      "module": "m02_variables_numbers",
+      "question": "What does int balance = 100; mean, part by part?",
+      "expected_answer": [
+        "int = type: whole numbers",
+        "balance = the name of the box",
+        "100 = the starting value"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-23",
+      "history": []
+    },
+    {
+      "id": "m02-002",
+      "module": "m02_variables_numbers",
+      "question": "What does balance = balance - 30; do?",
+      "expected_answer": [
+        "takes the CURRENT value of balance",
+        "subtracts 30",
+        "stores the result back in balance (the old value is gone)"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-23",
       "history": []
     }
   ]

@@ -17,8 +17,8 @@ public class Receipt {
 
     public static void main(String[] args) {
         System.out.println("MerryBank payment receipt");
-        // TODO: print line 2
-        // TODO: print line 3
-        // TODO: print line 4
+        System.out.println("To: Coffee Corner");
+        System.out.println("Amount: 4.50 EUR");
+        System.out.println("Status: APPROVED");
     }
 }
