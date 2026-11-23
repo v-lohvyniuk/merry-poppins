@@ -18,9 +18,9 @@ public class Wallet {
      */
     static int balanceAfterDay(int startBalance, int coffee, int groceries, int salary) {
         int balance = startBalance;
-        // TODO 1: pay for the coffee (update balance)
-        // TODO 2: pay for the groceries (update balance)
-        // TODO 3: the salary arrives (update balance)
+        balance = balance - coffee; 
+        balance = balance - groceries;
+        balance = balance + salary; 
         return balance;
     }
 }

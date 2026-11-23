@@ -15,8 +15,8 @@ public class Cashback {
      * Example: 59.99 with 2 percent cashback     ->  1.1998
      */
     static double cashback(double amount, double ratePercent) {
-        // TODO: calculate the cashback
-        return 0.0;
+        double cashback = amount * ratePercent / 100;
+        return cashback;
     }
 
     /**
@@ -25,7 +25,7 @@ public class Cashback {
      * Example: 10.00 in total over 4 payments  ->  2.5
      */
     static double averagePayment(double total, int payments) {
-        // TODO: calculate the average
-        return 0.0;
+        double average = total / payments;
+        return average;
     }
 }

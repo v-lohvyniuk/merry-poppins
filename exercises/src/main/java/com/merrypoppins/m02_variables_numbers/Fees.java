@@ -15,8 +15,8 @@ public class Fees {
      * Example: 1999 cents with a 3 percent fee   ->  59 cents (59.97 rounded down)
      */
     static int transferFeeCents(int amountCents, int feePercent) {
-        // TODO: calculate the fee
-        return 0;
+        int transferFee = amountCents * feePercent / 100;
+        return transferFee;
     }
 
     /**
@@ -26,8 +26,8 @@ public class Fees {
      * Example: 1000 cents, 3 people  ->  333 cents each
      */
     static int splitBillShareCents(int totalCents, int people) {
-        // TODO: calculate one person's share
-        return 0;
+        int amountToPay = totalCents / people; 
+        return amountToPay;
     }
 
     /**
@@ -37,7 +37,7 @@ public class Fees {
      * Example: 1000 cents, 4 people  ->  0 cents left over
      */
     static int splitBillLeftoverCents(int totalCents, int people) {
-        // TODO: calculate what is left over
-        return 0;
+        int leftOver = totalCents % people;
+        return leftOver;
     }
 }
