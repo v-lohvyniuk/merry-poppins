@@ -1,0 +1,45 @@
+{
+  "enabled": true,
+
+  "rest_days_per_week": 2,
+  "active_minutes": 10,
+
+  "streak_badges": [3, 7, 14, 30, 60, 100],
+  "mastered_card_interval_days": 16,
+  "mastered_card_badges": [10, 25, 50, 100],
+
+  "milestones": {
+    "m01": "First Java program",
+    "m08": "Milestone 1: I write methods and find my own bugs",
+    "m17": "Milestone 2: my unit tests catch real bugs",
+    "m24": "Milestone 3: my first UI test suite",
+    "m31": "Milestone 4: my first API test suite",
+    "m38": "Milestone 5: my own mini framework",
+    "m44": "Milestone 6: CI, triage and a mock interview"
+  },
+
+  "tutor_badges": {
+    "error_reader": {
+      "name": "Error reader",
+      "when": "She fixed a compile error by reading the message herself, with no hint above level 1."
+    },
+    "boundary_hunter": {
+      "name": "Boundary hunter",
+      "when": "She found or explained a boundary bug (> vs >=, < vs <=) herself, like a bug report."
+    },
+    "equals_not_double_equals": {
+      "name": "equals, never ==",
+      "when": "She explained in her own words, on the first try, why == is wrong for Strings."
+    },
+    "stack_trace_detective": {
+      "name": "Stack-trace detective",
+      "when": "She found her own line in a stack trace and fixed the bug without a level-3 hint."
+    },
+    "self_searcher": {
+      "name": "Self-searcher",
+      "when": "She found an answer in the docs or a web search herself before asking for a hint."
+    }
+  },
+
+  "bug_bounties_found": 0
+}

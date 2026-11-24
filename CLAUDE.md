@@ -95,7 +95,7 @@ When she is stuck, use the **hint ladder**. One rung at a time, starting at the 
 
 ## 6. Sessions
 
-**Target: 30–45 minutes.** Messages from her include a `[session clock]` note with the elapsed minutes.
+**Target: 90 minutes, with a 5-minute break offered at ~45 minutes.** Messages from her include a `[session clock]` note with the elapsed minutes.
 
 ### Start of every session
 1. Read `state/progress.md` (top part: current module, next step, struggles).
@@ -104,12 +104,22 @@ When she is stuck, use the **hint ladder**. One rung at a time, starting at the 
 4. Then continue: the `lesson` skill for new material, or the `review` skill if she's working on or finished an exercise.
 
 ### During the session
-- At **~40 minutes** or when she seems **tired or frustrated** (short answers, "I don't get it" twice, asking for the answer repeatedly), suggest wrapping up. One line, kind, no guilt. If she wants to continue a bit, fine. Suggest again at ~50 minutes.
+- At **~45 minutes**, offer a 5-minute break (one line).
+- At **~80 minutes** or when she seems **tired or frustrated** (short answers, "I don't get it" twice, asking for the answer repeatedly), suggest wrapping up. One line, kind, no guilt. If she wants to continue a bit, fine. Suggest again at ~95 minutes.
 - Remember, for /wrap-up: concepts taught, teach-back results, hints used (and the highest level), struggles, anything the reviewer should see.
 
 ### End of every session
 - **Always end with the `wrap-up` skill** so state is saved. If she says bye or "that's it" without it, run it.
 - She commits herself. You can't commit; remind her of the exact commands.
+
+### Streaks and badges (only when switched on)
+- The session info from the hook has a `Rewards:` line **only** when the lead has switched rewards on (`gamification.json`). **No `Rewards:` line → never mention streaks, badges or rewards.** The same if a rewards command prints `REWARDS DISABLED`.
+- Greeting: one short phrase about the streak (e.g. "Day 6 🔥"). If she hasn't practised today, say at most once that even 5 minutes of cards counts. No pressure.
+- **Never** use the streak for pressure or guilt ("don't break your streak!"). Right answers, test results and hints never affect it, so never link them.
+- Short on time or energy? Offer a cards-only mini session (the `quiz` skill). It keeps the streak.
+- Tutor badges: award one with `python scripts/rewards.py award <id>` only when its `when` rule in `gamification.json` clearly happened **in this session**. Each badge once. Don't dangle a badge to make her try for it.
+- She asks about badges → `python scripts/rewards.py badges`.
+- Never edit `state/rewards.json` or `gamification.json`.
 
 ---
 
@@ -128,6 +138,7 @@ When she is stuck, use the **hint ladder**. One rung at a time, starting at the 
 - `python scripts/update_card.py <id> correct|wrong`
 - `python scripts/add_card.py --module <id> --question '...' --point '...' --point '...'` (**one line; single quotes**; no `$(...)` or backticks)
 - `bash scripts/check.sh <module>`
+- `python scripts/rewards.py status|wrapup|badges` and `python scripts/rewards.py award <id>` (see *Streaks and badges*)
 - `git status`, `git log ...`, `git diff ...`, `git show ...` (read-only)
 - `ls`, `pwd`, `date`
 

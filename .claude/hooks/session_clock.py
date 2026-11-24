@@ -20,11 +20,17 @@ from datetime import date, datetime, timedelta
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _common import ROOT, read_input  # noqa: E402
 
+sys.path.insert(0, str(ROOT / "scripts"))
+try:
+    import rewards  # noqa: E402  (streaks/badges; switched on/off in gamification.json)
+except Exception:  # noqa: BLE001 - rewards must never break the clock
+    rewards = None
+
 SESSION_FILE = ROOT / "state" / ".session.json"
 PROGRESS_FILE = ROOT / "state" / "progress.md"
 CARDS_FILE = ROOT / "state" / "cards.json"
 RESUME_WINDOW = timedelta(hours=3)
-TARGET_MIN, TARGET_MAX = 30, 45
+TARGET_MIN, TARGET_MAX = 75, 90
 
 
 def now() -> datetime:
@@ -91,6 +97,13 @@ def start() -> None:
         f"- Next step recorded last time: {progress_field(progress, 'Next session starts with')}.",
         f"- Sessions so far: {progress_field(progress, 'Sessions so far')}.",
     ]
+    if rewards is not None:
+        try:
+            line = rewards.status_line()
+            if line:
+                lines.append(f"- {line}")
+        except Exception:  # noqa: BLE001
+            pass
     emit("SessionStart", "\n".join(lines))
 
 
@@ -100,12 +113,17 @@ def tick() -> None:
     if not began:
         return
     minutes = int((now() - began).total_seconds() // 60)
+    if rewards is not None:
+        try:
+            rewards.record_active(minutes)
+        except Exception:  # noqa: BLE001
+            pass
     text = f"[session clock] {minutes} min elapsed (target {TARGET_MIN}-{TARGET_MAX} min)."
     if session.get("ended_at"):
         text += " /wrap-up already ran for this session."
     elif minutes >= TARGET_MAX + 5:
         text += " Well past the target length."
-    elif minutes >= 40:
+    elif minutes >= TARGET_MIN:
         text += " Target length reached."
     emit("UserPromptSubmit", text)
 

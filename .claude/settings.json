@@ -6,6 +6,7 @@
       "Bash(python scripts/due_cards.py *)",
       "Bash(python scripts/update_card.py *)",
       "Bash(python scripts/add_card.py *)",
+      "Bash(python scripts/rewards.py *)",
       "Bash(bash scripts/check.sh *)",
       "Bash(cd exercises && mvn test *)",
       "Bash(cd exercises && mvn -q test *)",

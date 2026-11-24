@@ -1,7 +1,7 @@
 ---
 name: wrap-up
 description: End the tutoring session. Save progress to state/progress.md, add spaced-repetition cards for what she struggled with, flag items for the reviewer, and remind her to commit. Use at the end of every session, or when she says she's done or wants to stop.
-allowed-tools: Read Bash(python scripts/add_card.py *) Bash(python scripts/due_cards.py *) Bash(date *) Bash(git status *)
+allowed-tools: Read Bash(python scripts/rewards.py *) Bash(python scripts/add_card.py *) Bash(python scripts/due_cards.py *) Bash(date *) Bash(git status *)
 ---
 
 # Wrap-up: save state, then let her go
@@ -54,6 +54,11 @@ One line, single quotes, no `$` or backticks. Skip if a card for it already exis
 ## 4. Close the session clock
 Overwrite `state/.session.json` with the same `started_at` plus `"ended_at": "<now ISO time>"`.
 
+## 4b. Rewards (streaks and badges)
+- Run `python scripts/rewards.py wrapup`. If it prints `REWARDS DISABLED`, skip the rest of this step and say nothing about rewards.
+- Before that: if in this session she clearly met a tutor badge's `when` rule (see `gamification.json`), award it with `python scripts/rewards.py award <id>`.
+- Keep the printed lines (🔥 streak, 🏅 new badges) for step 5.
+
 ## 5. Talk to her (short!)
 - **2–3 lines:** what she did today (specific, honest), and one thing to look forward to next time.
 - Remind her to commit. She runs this herself in a terminal in the project folder:
@@ -61,4 +66,5 @@ Overwrite `state/.session.json` with the same `started_at` plus `"ended_at": "<n
   git add -A
   git commit -m "Session N: <short summary>"
   ```
+- If step 4b printed streak/badge lines, add them as they are, in one short extra line. No fuss.
 - Then stop. No new teaching.

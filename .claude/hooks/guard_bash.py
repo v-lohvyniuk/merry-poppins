@@ -22,7 +22,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _common import ROOT, block, is_inside, norm, read_input  # noqa: E402
 
-CARD_SCRIPTS = {"due_cards.py", "update_card.py", "add_card.py"}
+CARD_SCRIPTS = {"due_cards.py", "update_card.py", "add_card.py", "rewards.py"}
 SIMPLE = {"ls", "pwd", "date", "echo", "head", "tail", "wc", "grep", "which"}
 GIT_READONLY = {"status", "log", "diff", "show"}
 MVN_GOALS = {"clean", "compile", "test-compile", "test"}
@@ -66,9 +66,11 @@ def check_segment(words: list, cwd: str) -> str:
 
     if cmd in {"python", "python3", "py"}:
         if not args or not any(resolves_to(args[0], cwd, ROOT / "scripts" / s) for s in CARD_SCRIPTS):
-            deny(f"python may only run scripts/due_cards.py, update_card.py or add_card.py: `{shown}`")
+            deny(f"python may only run scripts/due_cards.py, update_card.py, add_card.py or rewards.py: `{shown}`")
         if any(a.startswith("--f") for a in args[1:]):  # --file and its argparse abbreviations
             deny("the --file option is reserved for the reviewer's tests; cards live in state/cards.json.")
+        if any(a.startswith("--t") for a in args[1:]):  # rewards.py --today and its abbreviations
+            deny("the --today option is reserved for the reviewer's tests.")
         return cwd
 
     check_sh = ROOT / "scripts" / "check.sh"

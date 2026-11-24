@@ -11,5 +11,6 @@ target/
 # Tutor runtime files (not part of the learning record)
 state/.session.json
 state/.cards-*.tmp
+state/.rewards-*.tmp
 .claude/settings.local.json
 __pycache__/

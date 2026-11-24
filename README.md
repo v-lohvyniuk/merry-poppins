@@ -24,7 +24,7 @@ An AI tutor that runs inside Claude Code. It teaches Java and test automation in
 2. Open this folder in your editor (IntelliJ IDEA Community is a good choice: *Open* → `exercises/pom.xml` → *Open as Project*).
 3. Start Claude Code **in this folder** (`merry-poppins/`, the one with `CLAUDE.md`) and say *hi*. The first session checks that everything works.
 
-### Every session (30–45 minutes)
+### Every session (90 minutes)
 1. Open Claude Code in this folder and say hi. The tutor starts with a **short quiz**, then continues where you stopped.
 2. Learn, try the exercise, and ask for help. Useful commands:
 
