@@ -1,9 +1,9 @@
 # Learning progress
 
-**Current module:** m03 (no curriculum file yet; m02_variables_numbers is complete)
-**Current step:** m02 complete (PASS 16/16); waiting for the m03 curriculum
-**Next session starts with:** quiz (incl. the new `=` direction card m02-007), then a short revisit of re-assignment; m03 lessons once the curriculum file exists
-**Sessions so far:** 3
+**Current module:** m03_conditions
+**Current step:** concepts 1–2 of 4 taught; TransferRules.java done (all its tests green, logic correct); TransferDecision and FeeTiers not started (need concepts 3–4)
+**Next session starts with:** quiz (incl. m02-007 `=` direction, m03-001/002), a 2-min `!` flip revisit, then concept 3 (`if / else`) and TransferDecision.decide
+**Sessions so far:** 4
 
 ---
 
@@ -11,6 +11,11 @@
 <!-- The tutor adds items here for the lead to look at. Newest first.
      Format: - [ ] YYYY-MM-DD · module · what to look at · why (file/line if relevant)
      The reviewer ticks [x] or deletes items once handled. -->
+- [ ] 2026-11-24 · m03_conditions · test gap in TransferRulesTest: her canTransfer once had `enoughMoney = dailyLimitCents >= balanceCents` (limit vs balance, a non-rule) and `dailyLimit = balanceCents >= amountCents`, and ALL TransferRules tests passed. It wrongly declines a rich customer (balance 100000, amount 1000, limit 50000 → false). Tutor caught it in review and she fixed it; consider adding that test case.
+- [ ] 2026-11-24 · process · session length: she asked for 90-min sessions. The m03 curriculum also says "90-minute sessions", but CLAUDE.md says 30–45 min. Please align. Today ran ~286 min on the clock incl. a ~2.5 h break (active ~140 min, estimate); she chose to continue every time a stop was offered.
+- [ ] 2026-11-24 · m03_conditions · `!` (NOT) failed teach-back 3 times (said "NOR", then names only, then "none"). She then used `!cardBlocked` correctly on her own in canTransfer. canTransfer needed hint level 3 (pseudo-code "enough AND within limit AND NOT blocked").
+- [ ] 2026-11-24 · m02/m03 · `=` direction still recurring: quiz card m02-007 wrong ("don't know" which box changes), predicted `apples` = 9 (thought `=` links boxes), answered `isFull = 3`, and wrote `cardBlocked = false` inside a condition. A human pairing moment on `=` vs `==` would help.
+- [ ] 2026-11-24 · git · the merge with origin/main was finished (commit 960b28c; its message accidentally contains Git's `#` help lines). Push first failed with 403 for GitHub user ladybird1; it worked after she was added as a collaborator.
 - [ ] 2026-11-23 · m03 · curriculum file missing: m02 is complete, but there is no curriculum/m03_*.md. The next session can only do quiz and revisits until it exists.
 - [ ] 2026-11-23 · m02_variables_numbers · Wallet needed hint level 3 (pseudo-code). She tried new variables (startBalance1/2/3, first undeclared, then declared), then wrote `startBalance3 = balance;` (reversed direction of `=`) before getting to `balance = balance - ...`. The direction of `=` and "update the same box" look like the real gap. A human pairing moment on this may help. Final Wallet.java is correct and uses re-assignment.
 - [ ] 2026-11-23 · tooling · session_clock again didn't start a new session when she returned (the clock continued from 21:58 on 2026-11-22). See the 2026-11-22 note.
@@ -23,12 +28,21 @@
      Status: open → improving → solid (remove rows that have been solid for 2+ weeks). -->
 | Since | Module | Topic | What goes wrong | Cards | Status |
 |---|---|---|---|---|---|
-| 2026-11-22 | m02_variables_numbers | re-assignment: "current" vs "initial" value; direction of `=` | 11-22: first teach-back said "initial balance". 11-23: quiz card correct, but in Wallet she made new boxes instead of updating `balance` and wrote `x = balance` the wrong way round; needed hint level 3. Got it right in the end | m02-002, m02-007 | open |
+| 2026-11-22 | m02_variables_numbers | re-assignment: "current" vs "initial" value; direction of `=` | 11-22: first teach-back said "initial balance". 11-23: quiz card correct, but in Wallet she made new boxes instead of updating `balance` and wrote `x = balance` the wrong way round; needed hint level 3. Got it right in the end. 11-24: m02-007 wrong; thought `apples = pears` links the boxes; wrote `cardBlocked = false` in a condition | m02-002, m02-007, m03-001 | open |
+| 2026-11-24 | m03_conditions | `!` (NOT) flips true/false | teach-back: "NOR", then "none"; 3 misses. In code she later wrote `!cardBlocked` correctly on her own | m03-002, m03-003 | improving |
+| 2026-11-24 | m03_conditions | method computes the answer into a box but returns a fixed `true`/`false` | hasEnoughMoney returned `true`, then `false`, before she returned the box; renamed boxes instead of fixing their content once | m03-004 | open |
 
 ---
 
 ## Session log (newest first)
 <!-- /wrap-up inserts each new session directly BELOW this line. Do not reorder. -->
+### Session 4 · 2026-11-24 · ~286 min on the clock incl. a ~2.5 h break (active ~140 min, estimate) · m03_conditions
+- **Covered:** finished the git merge + push; `=` revisit (copy, not link); m03 concept 1 (comparisons give a boolean, `=` vs `==`, boundary `<=`), concept 2 (`&&`, `||`, `!`); TransferRules exercise
+- **Teach-back:** comparisons / `=` vs `==`: after correction 🔁 (first said "== for strings") · `&&`/`||`: after correction 🔁 · `!`: not yet ❌ (3 misses; later used correctly in code)
+- **Quiz:** 6/7 correct (m02-007 `=` direction wrong)
+- **Exercise:** in progress: TransferRules done (all its tests green + review bug fixed); TransferDecision and FeeTiers not started, 13/26 failing · highest hint level: 3 (canTransfer) · compile errors: typos (`balaceCents`, `frue`), `cardBlocked = false` in a condition, deleted box still used · review: green but wrong line 37 (limit vs balance) → she fixed it
+- **Mood / energy:** motivated and persistent, chose to continue every time; short answers and typos near the end (tired)
+- **Next:** quiz (incl. m02-007, m03-001/002), a 2-min `!` flip revisit, then concept 3 (`if / else`) and TransferDecision.decide
 ### Session 3 · 2026-11-23 · ~140 min on the clock with breaks (active ~80–90 min, estimate) · m02_variables_numbers
 - **Covered:** Wallet exercise, concept 3 (`int` maths: `/` drops decimals, `%`, order matters), Fees exercise, concept 4 (`double`, `boolean`, lossy conversion), Cashback exercise
 - **Teach-back:** int maths: first try ✅ (added: cut off, not rounded) · types: first try ✅

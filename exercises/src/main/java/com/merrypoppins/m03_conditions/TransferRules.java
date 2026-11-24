@@ -14,8 +14,8 @@ public class TransferRules {
      * Exactly enough counts as enough.
      */
     static boolean hasEnoughMoney(int balanceCents, int amountCents) {
-        // TODO: compare the balance with the amount
-        return false;
+        boolean hasEnoughMoney = balanceCents >= amountCents;
+        return hasEnoughMoney;
     }
 
     /**
@@ -23,8 +23,8 @@ public class TransferRules {
      * Exactly the limit is still OK.
      */
     static boolean isWithinDailyLimit(int amountCents, int dailyLimitCents) {
-        // TODO: compare the amount with the limit
-        return false;
+        boolean isWithinDailyLimit = dailyLimitCents >= amountCents;
+        return isWithinDailyLimit;
     }
 
     /**
@@ -34,7 +34,10 @@ public class TransferRules {
      *   - the card is NOT blocked.
      */
     static boolean canTransfer(int balanceCents, int amountCents, int dailyLimitCents, boolean cardBlocked) {
-        // TODO: combine the three rules
-        return false;
+        boolean hasEnoughMoney = balanceCents >= amountCents;
+        boolean isWithinDailyLimit = dailyLimitCents >= amountCents;
+        boolean cardStatus = !cardBlocked;
+        boolean canTransfer = hasEnoughMoney && isWithinDailyLimit && cardStatus; 
+        return canTransfer;
     }
 }

@@ -8,11 +8,15 @@
         "the place where the program starts",
         "its lines run from top to bottom, in order"
       ],
-      "interval_days": 2,
-      "due_date": "2026-11-24",
+      "interval_days": 4,
+      "due_date": "2026-11-28",
       "history": [
         {
           "date": "2026-11-22",
+          "result": "correct"
+        },
+        {
+          "date": "2026-11-24",
           "result": "correct"
         }
       ]
@@ -25,11 +29,15 @@
         "prints the text between the quotes to the console",
         "one println = one line"
       ],
-      "interval_days": 2,
-      "due_date": "2026-11-24",
+      "interval_days": 4,
+      "due_date": "2026-11-28",
       "history": [
         {
           "date": "2026-11-22",
+          "result": "correct"
+        },
+        {
+          "date": "2026-11-24",
           "result": "correct"
         }
       ]
@@ -113,9 +121,14 @@
         "3",
         "int divided by int drops the decimals (no rounding, just cut off)"
       ],
-      "interval_days": 1,
-      "due_date": "2026-11-24",
-      "history": []
+      "interval_days": 2,
+      "due_date": "2026-11-26",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "result": "correct"
+        }
+      ]
     },
     {
       "id": "m02-004",
@@ -125,9 +138,14 @@
         "the leftover (remainder) of a division",
         "1"
       ],
-      "interval_days": 1,
-      "due_date": "2026-11-24",
-      "history": []
+      "interval_days": 2,
+      "due_date": "2026-11-26",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "result": "correct"
+        }
+      ]
     },
     {
       "id": "m02-005",
@@ -138,9 +156,14 @@
         "double: numbers with decimals (4.50)",
         "boolean: only true or false (yes/no)"
       ],
-      "interval_days": 1,
-      "due_date": "2026-11-24",
-      "history": []
+      "interval_days": 2,
+      "due_date": "2026-11-26",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "result": "correct"
+        }
+      ]
     },
     {
       "id": "m02-006",
@@ -150,9 +173,14 @@
         "you are putting a decimal into a whole-number box",
         "Java will not throw the decimals away silently: use double (or change the calculation)"
       ],
-      "interval_days": 1,
-      "due_date": "2026-11-24",
-      "history": []
+      "interval_days": 2,
+      "due_date": "2026-11-26",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "result": "correct"
+        }
+      ]
     },
     {
       "id": "m02-007",
@@ -163,7 +191,61 @@
         "only cups changed; plates keeps its value"
       ],
       "interval_days": 1,
-      "due_date": "2026-11-24",
+      "due_date": "2026-11-25",
+      "history": [
+        {
+          "date": "2026-11-24",
+          "result": "wrong"
+        }
+      ]
+    },
+    {
+      "id": "m03-001",
+      "module": "m03_conditions",
+      "question": "What is the difference between = and == ?",
+      "expected_answer": [
+        "= puts a value into a variable",
+        "== asks whether two values are equal (gives true or false)"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-25",
+      "history": []
+    },
+    {
+      "id": "m03-002",
+      "module": "m03_conditions",
+      "question": "What do the operators AND (&&), OR (||) and NOT (!) mean?",
+      "expected_answer": [
+        "&& = AND: all must be true",
+        "|| = OR: at least one must be true",
+        "! = NOT: flips true and false"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-25",
+      "history": []
+    },
+    {
+      "id": "m03-003",
+      "module": "m03_conditions",
+      "question": "cardBlocked is true when the card is blocked. How do you write the card is NOT blocked, and why not cardBlocked = false?",
+      "expected_answer": [
+        "put ! in front: !cardBlocked flips true and false",
+        "a single = puts false INTO the box, it does not ask a question"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-25",
+      "history": []
+    },
+    {
+      "id": "m03-004",
+      "module": "m03_conditions",
+      "question": "A method computes boolean ok = a >= b; and then does return true; What is wrong?",
+      "expected_answer": [
+        "it always hands back true, whatever the values are",
+        "return the box with the real answer: return ok;"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-25",
       "history": []
     }
   ]
