@@ -15,7 +15,14 @@ public class FeeTiers {
      *   100000 cents or more (1000 EUR or more)                ->  0
      */
     static int feePercent(int amountCents) {
-        // TODO: use if / else if / else
-        return 0;
+        int percent; 
+        if(amountCents < 10000){
+           percent = 2;
+        } else if (amountCents <= 99999){
+            percent = 1;
+        } else {
+            percent = 0;
+        }
+        return percent;
     }
 }

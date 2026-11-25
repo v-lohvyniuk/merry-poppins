@@ -50,11 +50,15 @@
         "every instruction ends with ; like a full stop",
         "// starts a comment: a note for humans that Java skips"
       ],
-      "interval_days": 2,
-      "due_date": "2026-11-25",
+      "interval_days": 4,
+      "due_date": "2026-11-29",
       "history": [
         {
           "date": "2026-11-23",
+          "result": "correct"
+        },
+        {
+          "date": "2026-11-25",
           "result": "correct"
         }
       ]
@@ -68,11 +72,15 @@
         "the message: what Java expected",
         "fix the first error first, then run again"
       ],
-      "interval_days": 2,
-      "due_date": "2026-11-25",
+      "interval_days": 4,
+      "due_date": "2026-11-29",
       "history": [
         {
           "date": "2026-11-23",
+          "result": "correct"
+        },
+        {
+          "date": "2026-11-25",
           "result": "correct"
         }
       ]
@@ -86,11 +94,15 @@
         "balance = the name of the box",
         "100 = the starting value"
       ],
-      "interval_days": 2,
-      "due_date": "2026-11-25",
+      "interval_days": 4,
+      "due_date": "2026-11-29",
       "history": [
         {
           "date": "2026-11-23",
+          "result": "correct"
+        },
+        {
+          "date": "2026-11-25",
           "result": "correct"
         }
       ]
@@ -104,11 +116,15 @@
         "subtracts 30",
         "stores the result back in balance (the old value is gone)"
       ],
-      "interval_days": 2,
-      "due_date": "2026-11-25",
+      "interval_days": 4,
+      "due_date": "2026-11-29",
       "history": [
         {
           "date": "2026-11-23",
+          "result": "correct"
+        },
+        {
+          "date": "2026-11-25",
           "result": "correct"
         }
       ]
@@ -190,12 +206,16 @@
         "= is not equals: it puts the value on the right INTO the box on the left",
         "only cups changed; plates keeps its value"
       ],
-      "interval_days": 1,
-      "due_date": "2026-11-25",
+      "interval_days": 2,
+      "due_date": "2026-11-27",
       "history": [
         {
           "date": "2026-11-24",
           "result": "wrong"
+        },
+        {
+          "date": "2026-11-25",
+          "result": "correct"
         }
       ]
     },
@@ -208,8 +228,13 @@
         "== asks whether two values are equal (gives true or false)"
       ],
       "interval_days": 1,
-      "due_date": "2026-11-25",
-      "history": []
+      "due_date": "2026-11-26",
+      "history": [
+        {
+          "date": "2026-11-25",
+          "result": "wrong"
+        }
+      ]
     },
     {
       "id": "m03-002",
@@ -220,9 +245,14 @@
         "|| = OR: at least one must be true",
         "! = NOT: flips true and false"
       ],
-      "interval_days": 1,
-      "due_date": "2026-11-25",
-      "history": []
+      "interval_days": 2,
+      "due_date": "2026-11-27",
+      "history": [
+        {
+          "date": "2026-11-25",
+          "result": "correct"
+        }
+      ]
     },
     {
       "id": "m03-003",
@@ -246,6 +276,57 @@
       ],
       "interval_days": 1,
       "due_date": "2026-11-25",
+      "history": []
+    },
+    {
+      "id": "m03-005",
+      "module": "m03_conditions",
+      "question": "What does if / else do, and how many of its blocks run?",
+      "expected_answer": [
+        "Java checks a true/false condition",
+        "true runs the if block, false runs the else block",
+        "always exactly one block runs, never both, never none"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-26",
+      "history": []
+    },
+    {
+      "id": "m03-006",
+      "module": "m03_conditions",
+      "question": "In an if / else if / else chain, how many branches run, and why does the order matter?",
+      "expected_answer": [
+        "only one: the first whose condition is true",
+        "so the order of the checks matters: most important rule first",
+        "the final else runs only if nothing above was true"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-26",
+      "history": []
+    },
+    {
+      "id": "m03-007",
+      "module": "m03_conditions",
+      "question": "The rule says: the amount is more than the daily limit. How do you turn that sentence into a comparison?",
+      "expected_answer": [
+        "name the two boxes from the sentence: amount and limit (not balance)",
+        "keep the sentence order: amount, then more than, then limit",
+        "test it with real numbers: 1000 vs limit 50000 should be false"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-26",
+      "history": []
+    },
+    {
+      "id": "m03-008",
+      "module": "m03_conditions",
+      "question": "What is the difference between return \"status\" and return status ?",
+      "expected_answer": [
+        "in double quotes it is fixed text: the word status, letter by letter",
+        "without quotes it is the box named status: Java uses what is inside it"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-26",
       "history": []
     }
   ]

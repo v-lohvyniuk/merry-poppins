@@ -14,8 +14,13 @@ public class TransferDecision {
      * otherwise "DECLINED".
      */
     static String decide(int balanceCents, int amountCents) {
-        // TODO: use if / else
-        return "";
+        String status;
+        if (balanceCents >= amountCents){
+            status = "APPROVED";
+        }else{
+            status = "DECLINED";
+        }
+        return status;
     }
 
     /**
@@ -28,7 +33,16 @@ public class TransferDecision {
      *   none of these                                 ->  "NONE"
      */
     static String declineReason(int balanceCents, int amountCents, int dailyLimitCents, boolean cardBlocked) {
-        // TODO: use if / else if / else
-        return "";
+        String status = "";
+        if (cardBlocked) {
+            status = "CARD_BLOCKED";
+        } else if (amountCents > dailyLimitCents ){
+            status = "OVER_DAILY_LIMIT"; 
+        } else if (amountCents > balanceCents){
+            status = "INSUFFICIENT_FUNDS";
+        } else {
+            status = "NONE";
+        }
+        return status;
     }
 }
