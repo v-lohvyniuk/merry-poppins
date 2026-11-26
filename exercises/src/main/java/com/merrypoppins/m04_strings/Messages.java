@@ -13,8 +13,8 @@ public class Messages {
      * Example: "Anna"  ->  "Hello, Anna!"
      */
     static String greeting(String firstName) {
-        // TODO: build the greeting
-        return "";
+        String welcome = "Hello, " + firstName + "!";
+        return welcome;
     }
 
     /**
@@ -23,8 +23,8 @@ public class Messages {
      * Example: ("Anna", 25, "EUR")  ->  "Sent 25 EUR to Anna"
      */
     static String transferLine(String recipient, int amount, String currency) {
-        // TODO: build the transfer line
-        return "";
+        String transfer = "Sent " + amount + " " + currency + " to " + recipient;
+        return transfer;
     }
 
     /**
@@ -33,7 +33,7 @@ public class Messages {
      * Example: (2, 3)  ->  "Total: 5 EUR"
      */
     static String totalLine(int firstPayment, int secondPayment) {
-        // TODO: build the total line (careful: the test checks the number is ADDED)
-        return "";
+        String total = "Total: " + (firstPayment + secondPayment) + " EUR"; // the number is ADDED
+        return total;
     }
 }

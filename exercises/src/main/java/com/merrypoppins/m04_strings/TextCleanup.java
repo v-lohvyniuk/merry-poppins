@@ -14,8 +14,9 @@ public class TextCleanup {
      * Examples: "usd" -> "USD",  "  eur " -> "EUR"
      */
     static String normalizeCurrency(String input) {
-        // TODO: clean up the input
-        return "";
+        String currency = input.toUpperCase();
+        String result = currency.trim();
+        return result;
     }
 
     /**
