@@ -1,9 +1,9 @@
 # Learning progress
 
 **Current module:** m04_strings
-**Current step:** m04 concepts 1–2 taught; Messages done, TextCleanup.normalizeCurrency done (14/21); isUkrainianIban, mentionsRefund, StatusChecks not started
-**Next session starts with:** quiz (incl. m04-002 "trim makes a copy", m03-003, m03-004), short revisit of "methods give a new String", then the rest of concept 2 (startsWith, contains, toLowerCase) and isUkrainianIban / mentionsRefund
-**Sessions so far:** 6
+**Current step:** m04 concepts 1–2 fully taught; Messages and TextCleanup done (17/21); StatusChecks (concept 3) not started
+**Next session starts with:** quiz (incl. m03-006 else-if "only one runs", m03-007 rule→comparison, m03-003 why-part, new search-word card), then concept 3 (`equals` vs `==`) and StatusChecks
+**Sessions so far:** 7
 
 ---
 
@@ -11,6 +11,8 @@
 <!-- The tutor adds items here for the lead to look at. Newest first.
      Format: - [ ] YYYY-MM-DD · module · what to look at · why (file/line if relevant)
      The reviewer ticks [x] or deletes items once handled. -->
+- [ ] 2026-11-27 · m04_strings · mentionsRefund: she confused the method's input with the search word. Attempts in `contains(...)`: "broken cup" (copied from the javadoc example), then `description` itself (always true), then a box holding the full example sentence "Partial refund: broken cup", then "refund". Got there with level-1/2 nudges (Ctrl+F analogy, "what text is in all three?"). Worth a human moment on "parameter = data that changes per test, literal = fixed". She then added `toLowerCase()` on the description on her own.
+- [ ] 2026-11-27 · m03_conditions · quiz m03-007: answered `dailyLimit > amount` (right boxes, reversed sign) — same direction gap as 11-25. m03-003 why-part again "boolean returns true" (2nd time).
 - [ ] 2026-11-26 · m04_strings · "String methods return a NEW String, the original doesn't change" failed teach-back 3 times (thought `raw.trim();` alone changes `raw`; said "name changes" twice). Right after, she wrote normalizeCurrency correctly with no hints, catching each result in a new box, and then said correctly that `input` stays lower case. Same pattern as `!` on 11-24: gets it in code before she can say it. Linked to the `=` direction gap (only `=` changes a box).
 - [ ] 2026-11-26 · m03_conditions · quiz m03-003: said `cardBlocked = false` is wrong "because a boolean is true by default" (a new misconception, not the `=`-puts-a-value reason).
 - [ ] 2026-11-25 · m03_conditions · recurring pattern: turning a rule sentence into a comparison. In declineReason she first wrote `dailyLimitCents > balanceCents` (limit vs balance, the SAME non-rule as in yesterday's canTransfer, see 11-24 note), then `dailyLimitCents > amountCents` (right boxes, wrong direction), then fixed it with level-2 hints. A human pairing moment on "read the rule, name the two boxes, then the sign" may help.
@@ -32,16 +34,25 @@
      Status: open → improving → solid (remove rows that have been solid for 2+ weeks). -->
 | Since | Module | Topic | What goes wrong | Cards | Status |
 |---|---|---|---|---|---|
-| 2026-11-22 | m02_variables_numbers | re-assignment: "current" vs "initial" value; direction of `=` | 11-22: first teach-back said "initial balance". 11-23: quiz card correct, but in Wallet she made new boxes instead of updating `balance` and wrote `x = balance` the wrong way round; needed hint level 3. Got it right in the end. 11-24: m02-007 wrong; thought `apples = pears` links the boxes; wrote `cardBlocked = false` in a condition. 11-25: m02-007 correct ("only cups"), m02-002 correct; m03-001 "don't know" although she'd said "= assign, == compare" minutes earlier; no `=`/`==` slips in code. 11-26: m03-001 correct ("= rewrite a box, == compare"); m03-003 why-part wrong ("boolean is true by default") | m02-002, m02-007, m03-001, m03-003 | improving |
+| 2026-11-22 | m02_variables_numbers | re-assignment: "current" vs "initial" value; direction of `=` | 11-22: first teach-back said "initial balance". 11-23: quiz card correct, but in Wallet she made new boxes instead of updating `balance` and wrote `x = balance` the wrong way round; needed hint level 3. Got it right in the end. 11-24: m02-007 wrong; thought `apples = pears` links the boxes; wrote `cardBlocked = false` in a condition. 11-25: m02-007 correct ("only cups"), m02-002 correct; m03-001 "don't know" although she'd said "= assign, == compare" minutes earlier; no `=`/`==` slips in code. 11-26: m03-001 correct ("= rewrite a box, == compare"); m03-003 why-part wrong ("boolean is true by default"). 11-27: m02-007 correct ("cups changes, plates same"), but m03-003 why-part wrong again ("boolean returns true") right after | m02-002, m02-007, m03-001, m03-003 | improving |
 | 2026-11-24 | m03_conditions | `!` (NOT) flips true/false | teach-back: "NOR", then "none"; 3 misses. In code she later wrote `!cardBlocked` correctly on her own. 11-25: quiz correct ("flip the meaning"); used `!cardBlocked` in a draft | m03-002, m03-003 | improving |
-| 2026-11-24 | m03_conditions | method computes the answer into a box but returns a fixed `true`/`false` | hasEnoughMoney returned `true`, then `false`, before she returned the box; renamed boxes instead of fixing their content once. 11-25: decide returned `"status"` (the word in quotes) instead of the box; fixed after a level-1 hint (quotes = fixed text). 11-26: quiz m03-004 wrong (answered ">= b", didn't see the `return true`) | m03-004, new quotes card | open |
-| 2026-11-25 | m03_conditions | turning a rule sentence into a comparison (which boxes, which direction) | 11-24 canTransfer: limit vs balance. 11-25 declineReason: limit vs balance again, then right boxes but reversed sign; fixed with level-2 hints | new rule→comparison card | open |
-| 2026-11-26 | m04_strings | String methods return a new String; the original box doesn't change | predicted `raw` = "Olena" after `raw.trim();`; 3 teach-back misses ("name changes"). Then normalizeCurrency correct with new boxes, no hints, and said `input` stays lower case | m04-002 | open |
+| 2026-11-24 | m03_conditions | method computes the answer into a box but returns a fixed `true`/`false` | hasEnoughMoney returned `true`, then `false`, before she returned the box; renamed boxes instead of fixing their content once. 11-25: decide returned `"status"` (the word in quotes) instead of the box; fixed after a level-1 hint (quotes = fixed text). 11-26: quiz m03-004 wrong (answered ">= b", didn't see the `return true`). 11-27: m03-004 correct ("return ok, not true"), m03-008 quotes correct | m03-004, m03-008 | improving |
+| 2026-11-25 | m03_conditions | turning a rule sentence into a comparison (which boxes, which direction) | 11-24 canTransfer: limit vs balance. 11-25 declineReason: limit vs balance again, then right boxes but reversed sign; fixed with level-2 hints. 11-27: quiz m03-007 right boxes, reversed sign | m03-007 | open |
+| 2026-11-26 | m04_strings | String methods return a new String; the original box doesn't change | predicted `raw` = "Olena" after `raw.trim();`; 3 teach-back misses ("name changes"). Then normalizeCurrency correct with new boxes, no hints, and said `input` stays lower case. 11-27 revisit: predicted `clean` right; first said `city` "will change", after photocopier analogy said "original is unchanged, copy is trimmed" ✅ | m04-002 | improving |
+| 2026-11-27 | m03_conditions | else-if chain: only ONE branch runs (the first true one) | quiz m03-006: "three branches" run | m03-006 | open |
+| 2026-11-27 | m04_strings | parameter (input box, changes per test) vs fixed text to search for | mentionsRefund: searched for the example text, then for `description` itself, then the full example sentence, before "refund" | new search-word card | open |
 
 ---
 
 ## Session log (newest first)
 <!-- /wrap-up inserts each new session directly BELOW this line. Do not reorder. -->
+### Session 7 · 2026-11-27 · 86 min (18:56–20:22) · m04_strings
+- **Covered:** quiz; revisit "methods give a new String"; rest of concept 2 (`startsWith`, `contains`, `toLowerCase`, capitals trap); TextCleanup.isUkrainianIban and mentionsRefund
+- **Teach-back:** methods give a new String: after re-explaining 🔁 (photocopier analogy worked) · startsWith/contains: after a nudge 🔁 (first missed "boolean" and the capitals trap, then named both)
+- **Quiz:** 4/7 correct (m03-006, m03-007, m03-003 wrong)
+- **Exercise:** in progress, 17/21: TextCleanup done; isUkrainianIban: compile error `startWith` (level 2 point), then passed; mentionsRefund: search-word confusion (level 2), then added `toLowerCase()` on her own · highest hint level: 2 · review: vague box names `a` (line 41) and `number` (line 29), not fixed · StatusChecks not started
+- **Mood / energy:** steady and focused; worked straight through without a break; short "check" messages
+- **Next:** quiz (incl. m03-006, m03-007, m03-003, new search-word card), then concept 3 (`equals` vs `==`) and StatusChecks
 ### Session 6 · 2026-11-26 · ~91 min (18:04–19:35; she asked to count from 18:04, clock started 17:51) · m04_strings
 - **Covered:** quiz; m04 concept 1 (`String`, `+` glues, left-to-right trap, parentheses), concept 2 part 1 (`trim`, `toUpperCase`, `length`, methods return a new String); Messages exercise, TextCleanup.normalizeCurrency
 - **Teach-back:** `+` / parentheses: first try ✅ (predicted "Sum: 2" first, then got "Items: 75" right) · methods return a new String: not yet ❌ in words (3 misses), but correct in her own code and in the follow-up question about `input`

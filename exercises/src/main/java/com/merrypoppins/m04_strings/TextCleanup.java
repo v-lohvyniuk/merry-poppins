@@ -25,8 +25,10 @@ public class TextCleanup {
      * Example: "UA213223130000026007233566001"  ->  true
      */
     static boolean isUkrainianIban(String iban) {
-        // TODO: check both rules
-        return false;
+        boolean ukrainian = iban.startsWith("UA");
+        int number = iban.length();
+        boolean result = ukrainian && number == 29;
+        return result;
     }
 
     /**
@@ -36,7 +38,8 @@ public class TextCleanup {
      * Example: "Partial refund: broken cup"  ->  true
      */
     static boolean mentionsRefund(String description) {
-        // TODO: look for the word "refund"
-        return false;
+        String a = "refund";
+        boolean refund = description.toLowerCase().contains(a);
+        return refund;
     }
 }

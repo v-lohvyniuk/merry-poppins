@@ -222,8 +222,8 @@
         "= is not equals: it puts the value on the right INTO the box on the left",
         "only cups changed; plates keeps its value"
       ],
-      "interval_days": 2,
-      "due_date": "2026-11-27",
+      "interval_days": 4,
+      "due_date": "2026-12-01",
       "history": [
         {
           "date": "2026-11-24",
@@ -231,6 +231,10 @@
         },
         {
           "date": "2026-11-25",
+          "result": "correct"
+        },
+        {
+          "date": "2026-11-27",
           "result": "correct"
         }
       ]
@@ -283,10 +287,14 @@
         "a single = puts false INTO the box, it does not ask a question"
       ],
       "interval_days": 1,
-      "due_date": "2026-11-27",
+      "due_date": "2026-11-28",
       "history": [
         {
           "date": "2026-11-26",
+          "result": "wrong"
+        },
+        {
+          "date": "2026-11-27",
           "result": "wrong"
         }
       ]
@@ -299,12 +307,16 @@
         "it always hands back true, whatever the values are",
         "return the box with the real answer: return ok;"
       ],
-      "interval_days": 1,
-      "due_date": "2026-11-27",
+      "interval_days": 2,
+      "due_date": "2026-11-29",
       "history": [
         {
           "date": "2026-11-26",
           "result": "wrong"
+        },
+        {
+          "date": "2026-11-27",
+          "result": "correct"
         }
       ]
     },
@@ -317,9 +329,14 @@
         "true runs the if block, false runs the else block",
         "always exactly one block runs, never both, never none"
       ],
-      "interval_days": 1,
-      "due_date": "2026-11-26",
-      "history": []
+      "interval_days": 2,
+      "due_date": "2026-11-29",
+      "history": [
+        {
+          "date": "2026-11-27",
+          "result": "correct"
+        }
+      ]
     },
     {
       "id": "m03-006",
@@ -331,8 +348,13 @@
         "the final else runs only if nothing above was true"
       ],
       "interval_days": 1,
-      "due_date": "2026-11-26",
-      "history": []
+      "due_date": "2026-11-28",
+      "history": [
+        {
+          "date": "2026-11-27",
+          "result": "wrong"
+        }
+      ]
     },
     {
       "id": "m03-007",
@@ -344,8 +366,13 @@
         "test it with real numbers: 1000 vs limit 50000 should be false"
       ],
       "interval_days": 1,
-      "due_date": "2026-11-26",
-      "history": []
+      "due_date": "2026-11-28",
+      "history": [
+        {
+          "date": "2026-11-27",
+          "result": "wrong"
+        }
+      ]
     },
     {
       "id": "m03-008",
@@ -355,9 +382,14 @@
         "in double quotes it is fixed text: the word status, letter by letter",
         "without quotes it is the box named status: Java uses what is inside it"
       ],
-      "interval_days": 1,
-      "due_date": "2026-11-26",
-      "history": []
+      "interval_days": 2,
+      "due_date": "2026-11-29",
+      "history": [
+        {
+          "date": "2026-11-27",
+          "result": "correct"
+        }
+      ]
     },
     {
       "id": "m04-001",
@@ -381,6 +413,32 @@
       ],
       "interval_days": 1,
       "due_date": "2026-11-27",
+      "history": []
+    },
+    {
+      "id": "m04-003",
+      "module": "m04_strings",
+      "question": "What do startsWith(\"x\") and contains(\"x\") give back, and what is the trap?",
+      "expected_answer": [
+        "a boolean: true or false",
+        "startsWith checks the beginning, contains checks anywhere in the text",
+        "they care about capitals: lisbon is not Lisbon"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-28",
+      "history": []
+    },
+    {
+      "id": "m04-004",
+      "module": "m04_strings",
+      "question": "In text.contains(\"x\"), which part is the text you search IN and which is the word you search FOR?",
+      "expected_answer": [
+        "text (the box, e.g. the method input) is where you search: it changes every test",
+        "the part in quotes is the fixed word you search for, like the Ctrl+F box",
+        "searching a text inside itself is always true"
+      ],
+      "interval_days": 1,
+      "due_date": "2026-11-28",
       "history": []
     }
   ]
